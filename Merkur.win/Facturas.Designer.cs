@@ -512,7 +512,7 @@
             this.clienteIdComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listadeFacturasBindingSource, "ClienteId", true));
             this.clienteIdComboBox.DataSource = this.listadeClientesBindingSource;
-            this.clienteIdComboBox.DisplayMember = "Cedula";
+            this.clienteIdComboBox.DisplayMember = "Nombres";
             this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clienteIdComboBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clienteIdComboBox.FormattingEnabled = true;

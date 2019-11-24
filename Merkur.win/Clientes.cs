@@ -30,7 +30,8 @@ namespace Merkur.win
             var nuevoCliente = new Cliente();
             nuevoCliente.Nombres = nombresTextBox.Text;
             nuevoCliente.Apellidos = apellidosTextBox.Text;
-            nuevoCliente.Cedula = cedulaTextBox.Text;
+            nuevoCliente.Cedula = long.Parse(cedulaTextBox.Text);
+
             //clear
             nombresTextBox.Clear();
             apellidosTextBox.Clear();
@@ -65,17 +66,14 @@ namespace Merkur.win
             }
         }
 
-        private void membresiaCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             _clientesBL.AgregarClientes();
             listadeClientesBindingSource.MoveLast();
-
             DeshabilitarHabilitarBotones(false);
+
         }
 
         private void DeshabilitarHabilitarBotones(bool valor)
@@ -114,17 +112,12 @@ namespace Merkur.win
 
         }
 
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
             var id = int.Parse(idTextBox.Text);
 
-            var Cedula = cedulaTextBox.Text;
+            var Cedula = int.Parse(cedulaTextBox.Text);
             var Nombres = nombresTextBox.Text;
             var Apellidos = apellidosTextBox.Text;            
             
@@ -177,10 +170,7 @@ namespace Merkur.win
             listadeClientesBindingSource.DataSource = Visible;
         }
 
-        private void Clientes_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 
 

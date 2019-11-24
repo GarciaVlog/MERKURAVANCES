@@ -144,6 +144,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Merkur.BL.Categoria.datasource" />
     <None Include="Properties\DataSources\Merkur.BL.CategoriasBL.datasource" />
+    <None Include="Properties\DataSources\Merkur.BL.Cliente.datasource" />
     <None Include="Properties\DataSources\Merkur.BL.ClientesBL.datasource" />
     <None Include="Properties\DataSources\Merkur.BL.FacturaBL.datasource" />
     <None Include="Properties\DataSources\Merkur.BL.Producto.datasource" />

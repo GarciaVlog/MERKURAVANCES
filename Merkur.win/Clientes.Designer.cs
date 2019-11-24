@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
-            System.Windows.Forms.Label apellidosLabel;
-            System.Windows.Forms.Label cedulaLabel;
-            System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label nombresLabel;
+            this.apellidosLabel1 = new System.Windows.Forms.Label();
+            this.cedulaLabel1 = new System.Windows.Forms.Label();
+            this.idLabel1 = new System.Windows.Forms.Label();
+            this.nombresLabel1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.listadeClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -47,6 +47,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.listadeClientesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtoncancelar = new System.Windows.Forms.ToolStripButton();
             this.button2 = new System.Windows.Forms.Button();
@@ -54,21 +55,56 @@
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
-            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button3 = new System.Windows.Forms.Button();
-            apellidosLabel = new System.Windows.Forms.Label();
-            cedulaLabel = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
-            nombresLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingNavigator)).BeginInit();
             this.listadeClientesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
+            // 
+            // apellidosLabel1
+            // 
+            this.apellidosLabel1.AutoSize = true;
+            this.apellidosLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellidosLabel1.Location = new System.Drawing.Point(27, 308);
+            this.apellidosLabel1.Name = "apellidosLabel1";
+            this.apellidosLabel1.Size = new System.Drawing.Size(94, 24);
+            this.apellidosLabel1.TabIndex = 37;
+            this.apellidosLabel1.Text = "Apellidos:";
+            // 
+            // cedulaLabel1
+            // 
+            this.cedulaLabel1.AutoSize = true;
+            this.cedulaLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cedulaLabel1.Location = new System.Drawing.Point(27, 336);
+            this.cedulaLabel1.Name = "cedulaLabel1";
+            this.cedulaLabel1.Size = new System.Drawing.Size(74, 24);
+            this.cedulaLabel1.TabIndex = 39;
+            this.cedulaLabel1.Text = "Cedula:";
+            // 
+            // idLabel1
+            // 
+            this.idLabel1.AutoSize = true;
+            this.idLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLabel1.Location = new System.Drawing.Point(27, 252);
+            this.idLabel1.Name = "idLabel1";
+            this.idLabel1.Size = new System.Drawing.Size(32, 24);
+            this.idLabel1.TabIndex = 41;
+            this.idLabel1.Text = "Id:";
+            // 
+            // nombresLabel1
+            // 
+            this.nombresLabel1.AutoSize = true;
+            this.nombresLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombresLabel1.Location = new System.Drawing.Point(27, 280);
+            this.nombresLabel1.Name = "nombresLabel1";
+            this.nombresLabel1.Size = new System.Drawing.Size(92, 24);
+            this.nombresLabel1.TabIndex = 43;
+            this.nombresLabel1.Text = "Nombres:";
             // 
             // button1
             // 
@@ -121,15 +157,9 @@
             this.listadeClientesBindingNavigator.TabIndex = 11;
             this.listadeClientesBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // listadeClientesBindingSource
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.listadeClientesBindingSource.DataSource = typeof(Merkur.BL.Cliente);
             // 
             // bindingNavigatorCountItem
             // 
@@ -146,7 +176,6 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -207,6 +236,16 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // listadeClientesBindingNavigatorSaveItem
             // 
@@ -281,113 +320,13 @@
             this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(547, 419);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(211, 34);
             this.button6.TabIndex = 6;
             this.button6.Text = "Capturar Foto";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // apellidosLabel
-            // 
-            apellidosLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            apellidosLabel.AutoSize = true;
-            apellidosLabel.BackColor = System.Drawing.Color.Transparent;
-            apellidosLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidosLabel.ForeColor = System.Drawing.Color.Black;
-            apellidosLabel.Location = new System.Drawing.Point(29, 313);
-            apellidosLabel.Name = "apellidosLabel";
-            apellidosLabel.Size = new System.Drawing.Size(94, 24);
-            apellidosLabel.TabIndex = 29;
-            apellidosLabel.Text = "Apellidos:";
-            // 
-            // apellidosTextBox
-            // 
-            this.apellidosTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Apellidos", true));
-            this.apellidosTextBox.Location = new System.Drawing.Point(138, 316);
-            this.apellidosTextBox.Name = "apellidosTextBox";
-            this.apellidosTextBox.Size = new System.Drawing.Size(353, 22);
-            this.apellidosTextBox.TabIndex = 3;
-            // 
-            // cedulaLabel
-            // 
-            cedulaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            cedulaLabel.AutoSize = true;
-            cedulaLabel.BackColor = System.Drawing.Color.Transparent;
-            cedulaLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cedulaLabel.ForeColor = System.Drawing.Color.Black;
-            cedulaLabel.Location = new System.Drawing.Point(29, 341);
-            cedulaLabel.Name = "cedulaLabel";
-            cedulaLabel.Size = new System.Drawing.Size(74, 24);
-            cedulaLabel.TabIndex = 31;
-            cedulaLabel.Text = "Cedula:";
-            // 
-            // cedulaTextBox
-            // 
-            this.cedulaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Cedula", true));
-            this.cedulaTextBox.Location = new System.Drawing.Point(138, 344);
-            this.cedulaTextBox.Name = "cedulaTextBox";
-            this.cedulaTextBox.Size = new System.Drawing.Size(353, 22);
-            this.cedulaTextBox.TabIndex = 4;
-            // 
-            // idLabel
-            // 
-            idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            idLabel.AutoSize = true;
-            idLabel.BackColor = System.Drawing.Color.Transparent;
-            idLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.ForeColor = System.Drawing.Color.Black;
-            idLabel.Location = new System.Drawing.Point(29, 257);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(32, 24);
-            idLabel.TabIndex = 35;
-            idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(138, 260);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(353, 22);
-            this.idTextBox.TabIndex = 1;
-            // 
-            // nombresLabel
-            // 
-            nombresLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            nombresLabel.AutoSize = true;
-            nombresLabel.BackColor = System.Drawing.Color.Transparent;
-            nombresLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombresLabel.ForeColor = System.Drawing.Color.Black;
-            nombresLabel.Location = new System.Drawing.Point(29, 285);
-            nombresLabel.Name = "nombresLabel";
-            nombresLabel.Size = new System.Drawing.Size(92, 24);
-            nombresLabel.TabIndex = 37;
-            nombresLabel.Text = "Nombres:";
-            // 
-            // nombresTextBox
-            // 
-            this.nombresTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Nombres", true));
-            this.nombresTextBox.Location = new System.Drawing.Point(138, 288);
-            this.nombresTextBox.Name = "nombresTextBox";
-            this.nombresTextBox.Size = new System.Drawing.Size(353, 22);
-            this.nombresTextBox.TabIndex = 2;
-            // 
-            // listadeClientesBindingSource
-            // 
-            this.listadeClientesBindingSource.DataSource = typeof(Merkur.BL.Cliente);
             // 
             // button3
             // 
@@ -402,19 +341,59 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // apellidosTextBox
+            // 
+            this.apellidosTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Apellidos", true));
+            this.apellidosTextBox.Location = new System.Drawing.Point(125, 308);
+            this.apellidosTextBox.Name = "apellidosTextBox";
+            this.apellidosTextBox.Size = new System.Drawing.Size(369, 22);
+            this.apellidosTextBox.TabIndex = 38;
+            // 
+            // cedulaTextBox
+            // 
+            this.cedulaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Cedula", true));
+            this.cedulaTextBox.Location = new System.Drawing.Point(125, 336);
+            this.cedulaTextBox.Name = "cedulaTextBox";
+            this.cedulaTextBox.Size = new System.Drawing.Size(369, 22);
+            this.cedulaTextBox.TabIndex = 40;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(125, 252);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(369, 22);
+            this.idTextBox.TabIndex = 42;
+            // 
+            // nombresTextBox
+            // 
+            this.nombresTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Nombres", true));
+            this.nombresTextBox.Location = new System.Drawing.Point(125, 280);
+            this.nombresTextBox.Name = "nombresTextBox";
+            this.nombresTextBox.Size = new System.Drawing.Size(369, 22);
+            this.nombresTextBox.TabIndex = 44;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 640);
-            this.Controls.Add(apellidosLabel);
+            this.Controls.Add(this.apellidosLabel1);
             this.Controls.Add(this.apellidosTextBox);
-            this.Controls.Add(cedulaLabel);
+            this.Controls.Add(this.cedulaLabel1);
             this.Controls.Add(this.cedulaTextBox);
-            this.Controls.Add(idLabel);
+            this.Controls.Add(this.idLabel1);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(nombresLabel);
+            this.Controls.Add(this.nombresLabel1);
             this.Controls.Add(this.nombresTextBox);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.fotoPictureBox);
@@ -425,16 +404,15 @@
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.Opacity = 0.9D;
             this.Text = "Cliente";
-            this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingNavigator)).EndInit();
             this.listadeClientesBindingNavigator.ResumeLayout(false);
             this.listadeClientesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,10 +441,14 @@
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox apellidosTextBox;
         private System.Windows.Forms.TextBox cedulaTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nombresTextBox;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label apellidosLabel1;
+        private System.Windows.Forms.Label cedulaLabel1;
+        private System.Windows.Forms.Label idLabel1;
+        private System.Windows.Forms.Label nombresLabel1;
     }
 }

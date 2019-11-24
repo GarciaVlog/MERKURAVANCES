@@ -42,12 +42,12 @@ namespace Merkur.BL
             contexto.Tipos.Add(tipo2);
 
             var clientes = new Cliente();
-            clientes.Cedula = "0502-1999-01495";
+            clientes.Cedula = 501215245454;
             clientes.Nombres = "Orlando";            
             clientes.Apellidos = "Garcia";
 
             var clientes2 = new Cliente();
-            clientes2.Cedula = "0502-1999-01495";           
+            clientes2.Cedula = 165648921554;           
             clientes2.Nombres = "Ronaldo";
             clientes2.Apellidos = "Zelaya";
             

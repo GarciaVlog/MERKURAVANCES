@@ -142,7 +142,8 @@ namespace Merkur.win
         private void listadeFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
-            var factura = (facturas1)listadeProductosBindingSource.Current;
+            var factura = (facturas1)listadeFacturasBindingSource.Current;
+
             if (factura == null && factura.Id != 0 && factura.Activo == false)
             {
                 label1.Visible = true;
