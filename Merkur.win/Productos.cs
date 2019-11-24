@@ -136,7 +136,7 @@ namespace Merkur.win
         private void button2_Click(object sender, EventArgs e)
         {
             listadeProductosDataGridView.DataSource = null;
-            listadeProductosDataGridView.DataSource = _productosBL.Obtener();
+            listadeProductosDataGridView.DataSource = _productosBL.Obtenerproductos();
         }
 
         private void descripcionLabel1_Click(object sender, EventArgs e)

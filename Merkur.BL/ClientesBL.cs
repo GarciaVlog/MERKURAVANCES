@@ -67,7 +67,15 @@ namespace Merkur.BL
             var resultado = new Resultado3();
             resultado.Exitoso = true;
 
-            if (clientes.Nombres == " ")
+            if (clientes == null)
+            {
+                resultado.Mensaje = "Agregue un Cliente valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
+            if (string.IsNullOrEmpty(clientes.Nombres) == true)
             {
                 resultado.Mensaje = "Ingrese un Nombre";
                 resultado.Exitoso = false;

@@ -117,11 +117,19 @@ namespace Merkur.win
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            var id = int.Parse(idTextBox.Text);
+
+            var Cedula = cedulaTextBox.Text;
+            var Nombres = nombresTextBox.Text;
+            var Apellidos = apellidosTextBox.Text;            
             
+            _clientesBL.Actualizar(id, Cedula, Nombres, Apellidos);
+            MessageBox.Show("Datos Actualizados");
         }
 
         private void button2_Click(object sender, EventArgs e)

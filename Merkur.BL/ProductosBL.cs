@@ -67,7 +67,15 @@ namespace Merkur.BL
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if(producto.Descripcion== " ")
+            if (producto == null)
+            {
+                resultado.Mensaje = "Agregue un producto valido";
+                resultado.Exitoso = false;
+
+                return resultado; 
+            }
+
+            if(string.IsNullOrEmpty(producto.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese una Descripcion";
                 resultado.Exitoso = false;
@@ -76,6 +84,11 @@ namespace Merkur.BL
             if (producto.Id<0)
             {
                 resultado.Mensaje = "el Id debe ser mayor que 0";
+                resultado.Exitoso = false;
+            }
+            if (producto.Precio < 0)
+            {
+                resultado.Mensaje = "Agregue un precio";
                 resultado.Exitoso = false;
             }
 

@@ -13,14 +13,14 @@ namespace Merkur.BL
     {
         Contexto _contexto;
 
-        public BindingList<Facturas1> ListadeFacturas { get; set; }
+        public BindingList<facturas1> ListadeFacturas { get; set; }
 
         public FacturaBL()
         {
             _contexto = new Contexto();
         }
 
-        public BindingList<Facturas1> ObtenerFacturas()
+        public BindingList<facturas1> ObtenerFacturas()
         {
             _contexto.Facturas.Include("FacturaDetalle").Load();
             ListadeFacturas = _contexto.Facturas.Local.ToBindingList();
@@ -30,11 +30,11 @@ namespace Merkur.BL
 
         public void AgregarFactura()
         {
-            var nuevaFactura = new Facturas1();
+            var nuevaFactura = new facturas1();
             _contexto.Facturas.Add(nuevaFactura);
         }
 
-        public void AgregarFacturaDetalle(Facturas1 factura)
+        public void AgregarFacturaDetalle(facturas1 factura)
         {
             if (factura != null)
             {
@@ -42,7 +42,7 @@ namespace Merkur.BL
                 factura.FacturaDetalle.Add(nuevaDetalle);
             }
         }
-        public void RemoverFacturaDetalle(Facturas1 factura, FacturasDetalle  facturaDetalle)
+        public void RemoverFacturaDetalle(facturas1 factura, FacturasDetalle facturaDetalle)
         {
             if (factura != null && facturaDetalle != null)
             {
@@ -60,7 +60,7 @@ namespace Merkur.BL
             }
         }
 
-        public Resultado3 GuardarFactura(Facturas1 factura)
+        public Resultado3 GuardarFactura(facturas1 factura)
         {
             var resultado3 = Validar(factura);
             if (resultado3.Exitoso == false)
@@ -72,15 +72,51 @@ namespace Merkur.BL
             return resultado3;
         }
 
-        private Resultado3 Validar(Facturas1 factura)
+        private Resultado3 Validar(facturas1 factura)
         {
             var resultado3 = new Resultado3();
             resultado3.Exitoso = true;
+            if (factura == null)
+            {
+                resultado3.Mensaje = "Agregue un Factura Nueva!";
+                resultado3.Exitoso = false;
+
+                return resultado3;
+            }
+            if (factura.Id != 0 && factura.Activo == true)
+            {
+                resultado3.Mensaje = "La factura ya fue emitida y no se pueden realizar cambios en ella!";
+                resultado3.Exitoso = false;
+            }
+
+            if (factura.Activo == false)
+            {
+                resultado3.Mensaje = "La factura esta Anula y No se Puede Modificar!";
+                resultado3.Exitoso = false;
+            }
+            if (factura.ClienteId == 0)
+            {
+                resultado3.Mensaje = "Seleccione un Cliente";
+                resultado3.Exitoso = false;
+            }
+            if (factura.FacturaDetalle.Count == 0)
+            {
+                resultado3.Mensaje = "Agregue producto a la factura";
+                resultado3.Exitoso = false;
+            }
+            foreach (var detalle in factura.FacturaDetalle)
+            {
+                if (detalle.ProductoId == 0)
+                {
+                    resultado3.Mensaje = "Seleccione producto validados";
+                    resultado3.Exitoso = false;
+                }
+            }
 
             return resultado3;
-        }  
+        }
 
-        public void CalcularFactura(Facturas1 factura)
+        public void CalcularFactura(facturas1 factura)
         {
             if (factura != null)
             {
@@ -100,17 +136,31 @@ namespace Merkur.BL
                 }
                 factura.SubTotal = Subtotal;
                 factura.IVS = Subtotal * 0.15;
-                factura.Total = Subtotal + factura.IVS; 
+                factura.Total = Subtotal + factura.IVS;
             }
 
         }
-        
+
+        public bool AnularFactura(int id)
+        {
+            foreach (var factura in ListadeFacturas)
+            {
+                if (factura.Id == id)
+                {
+                    factura.Activo = false;
+                    _contexto.SaveChanges();
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
        
 
     }
 
-    public class Facturas1
+    public class facturas1
     {
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
@@ -125,7 +175,7 @@ namespace Merkur.BL
         public double Total { get; set; }
         public bool Activo { get; set; }
 
-        public Facturas1()
+        public facturas1()
         {
             Fecha = DateTime.Now;
             FacturaDetalle = new BindingList<FacturasDetalle>();

@@ -43,9 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.listadeFacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listadeFacturasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -54,6 +52,8 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listadeFacturasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtoncancelar = new System.Windows.Forms.ToolStripButton();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
@@ -76,6 +76,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             destinoLabel = new System.Windows.Forms.Label();
@@ -97,11 +98,10 @@
             // 
             // activoLabel
             // 
-            activoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            activoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             activoLabel.AutoSize = true;
             activoLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            activoLabel.Location = new System.Drawing.Point(353, 123);
+            activoLabel.Location = new System.Drawing.Point(414, 121);
             activoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(59, 21);
@@ -156,9 +156,9 @@
             fechaLabel.Location = new System.Drawing.Point(15, 249);
             fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(56, 21);
+            fechaLabel.Size = new System.Drawing.Size(136, 21);
             fechaLabel.TabIndex = 18;
-            fechaLabel.Text = "Fecha:";
+            fechaLabel.Text = "Fecha de Entrega:";
             // 
             // idLabel
             // 
@@ -179,7 +179,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             iVSLabel.AutoSize = true;
             iVSLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iVSLabel.Location = new System.Drawing.Point(389, 577);
+            iVSLabel.Location = new System.Drawing.Point(391, 555);
             iVSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             iVSLabel.Name = "iVSLabel";
             iVSLabel.Size = new System.Drawing.Size(38, 21);
@@ -205,7 +205,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             subTotalLabel.AutoSize = true;
             subTotalLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            subTotalLabel.Location = new System.Drawing.Point(389, 545);
+            subTotalLabel.Location = new System.Drawing.Point(391, 523);
             subTotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             subTotalLabel.Name = "subTotalLabel";
             subTotalLabel.Size = new System.Drawing.Size(79, 21);
@@ -218,7 +218,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             totalLabel.AutoSize = true;
             totalLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            totalLabel.Location = new System.Drawing.Point(389, 604);
+            totalLabel.Location = new System.Drawing.Point(391, 582);
             totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             totalLabel.Name = "totalLabel";
             totalLabel.Size = new System.Drawing.Size(49, 21);
@@ -246,7 +246,8 @@
             // 
             // listadeFacturasBindingSource
             // 
-            this.listadeFacturasBindingSource.DataSource = typeof(Merkur.BL.Facturas1);
+            this.listadeFacturasBindingSource.DataSource = typeof(Merkur.BL.facturas1);
+            this.listadeFacturasBindingSource.CurrentChanged += new System.EventHandler(this.listadeFacturasBindingSource_CurrentChanged);
             // 
             // listadeFacturasBindingNavigator
             // 
@@ -280,31 +281,12 @@
             this.listadeFacturasBindingNavigator.TabIndex = 10;
             this.listadeFacturasBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -366,6 +348,26 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Anular";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
             // listadeFacturasBindingNavigatorSaveItem
             // 
             this.listadeFacturasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -388,14 +390,14 @@
             // 
             // activoCheckBox
             // 
-            this.activoCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.activoCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listadeFacturasBindingSource, "Activo", true));
+            this.activoCheckBox.Enabled = false;
             this.activoCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheckBox.Location = new System.Drawing.Point(481, 117);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoCheckBox.Location = new System.Drawing.Point(482, 116);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(80, 30);
+            this.activoCheckBox.Size = new System.Drawing.Size(19, 30);
             this.activoCheckBox.TabIndex = 11;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -406,10 +408,10 @@
             this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "Destino", true));
             this.destinoTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.destinoTextBox.Location = new System.Drawing.Point(161, 180);
-            this.destinoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.destinoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.destinoTextBox.Name = "destinoTextBox";
             this.destinoTextBox.Size = new System.Drawing.Size(340, 27);
-            this.destinoTextBox.TabIndex = 15;
+            this.destinoTextBox.TabIndex = 3;
             // 
             // entradaPaqueteDateTimePicker
             // 
@@ -418,10 +420,10 @@
             this.entradaPaqueteDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listadeFacturasBindingSource, "EntradaPaquete", true));
             this.entradaPaqueteDateTimePicker.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entradaPaqueteDateTimePicker.Location = new System.Drawing.Point(161, 212);
-            this.entradaPaqueteDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.entradaPaqueteDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.entradaPaqueteDateTimePicker.Name = "entradaPaqueteDateTimePicker";
             this.entradaPaqueteDateTimePicker.Size = new System.Drawing.Size(340, 27);
-            this.entradaPaqueteDateTimePicker.TabIndex = 17;
+            this.entradaPaqueteDateTimePicker.TabIndex = 4;
             // 
             // fechaDateTimePicker
             // 
@@ -430,34 +432,34 @@
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listadeFacturasBindingSource, "Fecha", true));
             this.fechaDateTimePicker.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaDateTimePicker.Location = new System.Drawing.Point(161, 244);
-            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(340, 27);
-            this.fechaDateTimePicker.TabIndex = 19;
+            this.fechaDateTimePicker.TabIndex = 5;
             // 
             // idTextBox
             // 
             this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "Id", true));
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
             this.idTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idTextBox.Location = new System.Drawing.Point(161, 117);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(127, 27);
-            this.idTextBox.TabIndex = 21;
+            this.idTextBox.TabIndex = 1;
             // 
             // iVSTextBox
             // 
             this.iVSTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iVSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "IVS", true));
+            this.iVSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "IVS", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.iVSTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iVSTextBox.Location = new System.Drawing.Point(517, 569);
-            this.iVSTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iVSTextBox.Location = new System.Drawing.Point(519, 547);
+            this.iVSTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.iVSTextBox.Name = "iVSTextBox";
             this.iVSTextBox.Size = new System.Drawing.Size(265, 27);
-            this.iVSTextBox.TabIndex = 23;
+            this.iVSTextBox.TabIndex = 10;
             // 
             // pesoPaqueteTextBox
             // 
@@ -466,34 +468,34 @@
             this.pesoPaqueteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "PesoPaquete", true));
             this.pesoPaqueteTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pesoPaqueteTextBox.Location = new System.Drawing.Point(161, 277);
-            this.pesoPaqueteTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pesoPaqueteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pesoPaqueteTextBox.Name = "pesoPaqueteTextBox";
             this.pesoPaqueteTextBox.Size = new System.Drawing.Size(340, 27);
-            this.pesoPaqueteTextBox.TabIndex = 25;
+            this.pesoPaqueteTextBox.TabIndex = 6;
             // 
             // subTotalTextBox
             // 
             this.subTotalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subTotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "SubTotal", true));
+            this.subTotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "SubTotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.subTotalTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subTotalTextBox.Location = new System.Drawing.Point(517, 537);
-            this.subTotalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subTotalTextBox.Location = new System.Drawing.Point(519, 515);
+            this.subTotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.subTotalTextBox.Name = "subTotalTextBox";
             this.subTotalTextBox.Size = new System.Drawing.Size(265, 27);
-            this.subTotalTextBox.TabIndex = 27;
+            this.subTotalTextBox.TabIndex = 9;
             // 
             // totalTextBox
             // 
             this.totalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "Total", true));
+            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.totalTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox.Location = new System.Drawing.Point(517, 601);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalTextBox.Location = new System.Drawing.Point(519, 579);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.Size = new System.Drawing.Size(265, 27);
-            this.totalTextBox.TabIndex = 29;
+            this.totalTextBox.TabIndex = 11;
             // 
             // listadeClientesBindingSource
             // 
@@ -515,10 +517,10 @@
             this.clienteIdComboBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clienteIdComboBox.FormattingEnabled = true;
             this.clienteIdComboBox.Location = new System.Drawing.Point(161, 146);
-            this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
             this.clienteIdComboBox.Size = new System.Drawing.Size(340, 27);
-            this.clienteIdComboBox.TabIndex = 43;
+            this.clienteIdComboBox.TabIndex = 2;
             this.clienteIdComboBox.ValueMember = "Id";
             // 
             // facturaDetalleBindingSource
@@ -541,7 +543,7 @@
             this.dataGridViewTextBoxColumn6});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
             this.facturaDetalleDataGridView.Location = new System.Drawing.Point(28, 320);
-            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(756, 177);
             this.facturaDetalleDataGridView.TabIndex = 43;
@@ -586,10 +588,10 @@
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(683, 281);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 31);
-            this.button1.TabIndex = 44;
+            this.button1.TabIndex = 7;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -602,14 +604,27 @@
             this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(729, 281);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(47, 31);
-            this.button3.TabIndex = 44;
+            this.button3.TabIndex = 8;
             this.button3.Text = "-";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(668, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 29);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "ANULADO";
+            this.label1.Visible = false;
             // 
             // Facturas
             // 
@@ -617,6 +632,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 640);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.facturaDetalleDataGridView);
@@ -644,10 +660,11 @@
             this.Controls.Add(this.button2);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Facturas";
             this.Opacity = 0.9D;
             this.Text = "Facturas";
+            this.Load += new System.EventHandler(this.Facturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listadeFacturasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeFacturasBindingNavigator)).EndInit();
             this.listadeFacturasBindingNavigator.ResumeLayout(false);
@@ -698,5 +715,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -49,24 +49,17 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.listadeClientesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtoncancelar = new System.Windows.Forms.ToolStripButton();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
-            this.listadeClientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             apellidosLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -75,7 +68,6 @@
             this.listadeClientesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -99,7 +91,7 @@
             // 
             // listadeClientesBindingNavigator
             // 
-            this.listadeClientesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.listadeClientesBindingNavigator.AddNewItem = null;
             this.listadeClientesBindingNavigator.BindingSource = this.listadeClientesBindingSource;
             this.listadeClientesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listadeClientesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -238,29 +230,16 @@
             this.toolStripButtoncancelar.Visible = false;
             this.toolStripButtoncancelar.Click += new System.EventHandler(this.toolStripButtoncancelar_Click);
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(230, 289);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 42);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "ACTUALIZAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(568, 293);
+            this.button2.Location = new System.Drawing.Point(547, 386);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(211, 34);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Agregar Foto";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -270,11 +249,11 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(568, 359);
+            this.button4.Location = new System.Drawing.Point(547, 452);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(211, 34);
-            this.button4.TabIndex = 9;
+            this.button4.TabIndex = 7;
             this.button4.Text = "Eliminar Foto";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -284,7 +263,7 @@
             this.fotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fotoPictureBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listadeClientesBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(568, 126);
+            this.fotoPictureBox.Location = new System.Drawing.Point(547, 219);
             this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(211, 162);
@@ -296,36 +275,19 @@
             // 
             this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(230, 332);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 38);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "OBTENER";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(568, 326);
+            this.button6.Location = new System.Drawing.Point(547, 419);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(211, 34);
-            this.button6.TabIndex = 29;
+            this.button6.TabIndex = 6;
             this.button6.Text = "Capturar Foto";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // listadeClientesBindingSource
-            // 
-            this.listadeClientesBindingSource.DataSource = typeof(Merkur.BL.Cliente);
             // 
             // apellidosLabel
             // 
@@ -335,7 +297,7 @@
             apellidosLabel.BackColor = System.Drawing.Color.Transparent;
             apellidosLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             apellidosLabel.ForeColor = System.Drawing.Color.Black;
-            apellidosLabel.Location = new System.Drawing.Point(38, 196);
+            apellidosLabel.Location = new System.Drawing.Point(29, 313);
             apellidosLabel.Name = "apellidosLabel";
             apellidosLabel.Size = new System.Drawing.Size(94, 24);
             apellidosLabel.TabIndex = 29;
@@ -346,10 +308,10 @@
             this.apellidosTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Apellidos", true));
-            this.apellidosTextBox.Location = new System.Drawing.Point(147, 199);
+            this.apellidosTextBox.Location = new System.Drawing.Point(138, 316);
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(353, 22);
-            this.apellidosTextBox.TabIndex = 30;
+            this.apellidosTextBox.TabIndex = 3;
             // 
             // cedulaLabel
             // 
@@ -359,7 +321,7 @@
             cedulaLabel.BackColor = System.Drawing.Color.Transparent;
             cedulaLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cedulaLabel.ForeColor = System.Drawing.Color.Black;
-            cedulaLabel.Location = new System.Drawing.Point(38, 224);
+            cedulaLabel.Location = new System.Drawing.Point(29, 341);
             cedulaLabel.Name = "cedulaLabel";
             cedulaLabel.Size = new System.Drawing.Size(74, 24);
             cedulaLabel.TabIndex = 31;
@@ -370,10 +332,10 @@
             this.cedulaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Cedula", true));
-            this.cedulaTextBox.Location = new System.Drawing.Point(147, 227);
+            this.cedulaTextBox.Location = new System.Drawing.Point(138, 344);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(353, 22);
-            this.cedulaTextBox.TabIndex = 32;
+            this.cedulaTextBox.TabIndex = 4;
             // 
             // idLabel
             // 
@@ -383,7 +345,7 @@
             idLabel.BackColor = System.Drawing.Color.Transparent;
             idLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idLabel.ForeColor = System.Drawing.Color.Black;
-            idLabel.Location = new System.Drawing.Point(38, 140);
+            idLabel.Location = new System.Drawing.Point(29, 257);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(32, 24);
             idLabel.TabIndex = 35;
@@ -394,10 +356,10 @@
             this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(147, 143);
+            this.idTextBox.Location = new System.Drawing.Point(138, 260);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(353, 22);
-            this.idTextBox.TabIndex = 36;
+            this.idTextBox.TabIndex = 1;
             // 
             // nombresLabel
             // 
@@ -407,7 +369,7 @@
             nombresLabel.BackColor = System.Drawing.Color.Transparent;
             nombresLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombresLabel.ForeColor = System.Drawing.Color.Black;
-            nombresLabel.Location = new System.Drawing.Point(38, 168);
+            nombresLabel.Location = new System.Drawing.Point(29, 285);
             nombresLabel.Name = "nombresLabel";
             nombresLabel.Size = new System.Drawing.Size(92, 24);
             nombresLabel.TabIndex = 37;
@@ -418,59 +380,27 @@
             this.nombresTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Nombres", true));
-            this.nombresTextBox.Location = new System.Drawing.Point(147, 171);
+            this.nombresTextBox.Location = new System.Drawing.Point(138, 288);
             this.nombresTextBox.Name = "nombresTextBox";
             this.nombresTextBox.Size = new System.Drawing.Size(353, 22);
-            this.nombresTextBox.TabIndex = 38;
+            this.nombresTextBox.TabIndex = 2;
             // 
-            // listadeClientesDataGridView
+            // listadeClientesBindingSource
             // 
-            this.listadeClientesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listadeClientesDataGridView.AutoGenerateColumns = false;
-            this.listadeClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listadeClientesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1});
-            this.listadeClientesDataGridView.DataSource = this.listadeClientesBindingSource;
-            this.listadeClientesDataGridView.Location = new System.Drawing.Point(120, 408);
-            this.listadeClientesDataGridView.Name = "listadeClientesDataGridView";
-            this.listadeClientesDataGridView.RowTemplate.Height = 24;
-            this.listadeClientesDataGridView.Size = new System.Drawing.Size(554, 220);
-            this.listadeClientesDataGridView.TabIndex = 38;
+            this.listadeClientesBindingSource.DataSource = typeof(Merkur.BL.Cliente);
             // 
-            // dataGridViewTextBoxColumn1
+            // button3
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cedula";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cedula";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Nombres";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Apellidos";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Apellidos";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.DataPropertyName = "Foto";
-            this.dataGridViewImageColumn1.HeaderText = "Foto";
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(240, 382);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(148, 42);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "ACTUALIZAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Clientes
             // 
@@ -478,7 +408,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 640);
-            this.Controls.Add(this.listadeClientesDataGridView);
             this.Controls.Add(apellidosLabel);
             this.Controls.Add(this.apellidosTextBox);
             this.Controls.Add(cedulaLabel);
@@ -488,7 +417,6 @@
             this.Controls.Add(nombresLabel);
             this.Controls.Add(this.nombresTextBox);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -507,7 +435,6 @@
             this.listadeClientesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,22 +458,15 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listadeClientesBindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton toolStripButtoncancelar;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox apellidosTextBox;
         private System.Windows.Forms.TextBox cedulaTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nombresTextBox;
-        private System.Windows.Forms.DataGridView listadeClientesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -101,9 +101,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             activoLabel.AutoSize = true;
             activoLabel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            activoLabel.Location = new System.Drawing.Point(74, 255);
+            activoLabel.Location = new System.Drawing.Point(99, 314);
+            activoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(51, 18);
+            activoLabel.Size = new System.Drawing.Size(65, 23);
             activoLabel.TabIndex = 9;
             activoLabel.Text = "Activo:";
             // 
@@ -113,9 +114,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             descripcionLabel.AutoSize = true;
             descripcionLabel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descripcionLabel.Location = new System.Drawing.Point(74, 110);
+            descripcionLabel.Location = new System.Drawing.Point(99, 135);
+            descripcionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descripcionLabel.Name = "descripcionLabel";
-            descripcionLabel.Size = new System.Drawing.Size(84, 18);
+            descripcionLabel.Size = new System.Drawing.Size(108, 23);
             descripcionLabel.TabIndex = 11;
             descripcionLabel.Text = "Descripcion:";
             // 
@@ -125,9 +127,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             destinoLabel.AutoSize = true;
             destinoLabel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            destinoLabel.Location = new System.Drawing.Point(74, 185);
+            destinoLabel.Location = new System.Drawing.Point(99, 228);
+            destinoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             destinoLabel.Name = "destinoLabel";
-            destinoLabel.Size = new System.Drawing.Size(60, 18);
+            destinoLabel.Size = new System.Drawing.Size(76, 23);
             destinoLabel.TabIndex = 13;
             destinoLabel.Text = "Destino:";
             // 
@@ -137,9 +140,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             fechadeEntregaLabel.AutoSize = true;
             fechadeEntregaLabel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fechadeEntregaLabel.Location = new System.Drawing.Point(74, 206);
+            fechadeEntregaLabel.Location = new System.Drawing.Point(99, 254);
+            fechadeEntregaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechadeEntregaLabel.Name = "fechadeEntregaLabel";
-            fechadeEntregaLabel.Size = new System.Drawing.Size(114, 18);
+            fechadeEntregaLabel.Size = new System.Drawing.Size(146, 23);
             fechadeEntregaLabel.TabIndex = 15;
             fechadeEntregaLabel.Text = "Fechade Entrega:";
             // 
@@ -149,9 +153,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(74, 87);
+            idLabel.Location = new System.Drawing.Point(99, 107);
+            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(24, 18);
+            idLabel.Size = new System.Drawing.Size(30, 23);
             idLabel.TabIndex = 17;
             idLabel.Text = "Id:";
             // 
@@ -161,10 +166,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             categoriaIdLabel.AutoSize = true;
             categoriaIdLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            categoriaIdLabel.Location = new System.Drawing.Point(74, 161);
-            categoriaIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            categoriaIdLabel.Location = new System.Drawing.Point(99, 198);
             categoriaIdLabel.Name = "categoriaIdLabel";
-            categoriaIdLabel.Size = new System.Drawing.Size(78, 19);
+            categoriaIdLabel.Size = new System.Drawing.Size(96, 24);
             categoriaIdLabel.TabIndex = 20;
             categoriaIdLabel.Text = "Categoria:";
             // 
@@ -174,10 +178,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             tipoIdLabel.AutoSize = true;
             tipoIdLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoIdLabel.Location = new System.Drawing.Point(74, 136);
-            tipoIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            tipoIdLabel.Location = new System.Drawing.Point(99, 167);
             tipoIdLabel.Name = "tipoIdLabel";
-            tipoIdLabel.Size = new System.Drawing.Size(43, 19);
+            tipoIdLabel.Size = new System.Drawing.Size(53, 24);
             tipoIdLabel.TabIndex = 19;
             tipoIdLabel.Text = "Tipo:";
             // 
@@ -185,11 +188,12 @@
             // 
             precioLabel.AutoSize = true;
             precioLabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precioLabel.Location = new System.Drawing.Point(74, 230);
+            precioLabel.Location = new System.Drawing.Point(99, 283);
+            precioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(51, 18);
+            precioLabel.Size = new System.Drawing.Size(136, 23);
             precioLabel.TabIndex = 21;
-            precioLabel.Text = "Precio:";
+            precioLabel.Text = "Precio de Envio:";
             // 
             // button3
             // 
@@ -201,9 +205,9 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(665, 53);
+            this.button3.Size = new System.Drawing.Size(887, 65);
             this.button3.TabIndex = 8;
             this.button3.Text = "PRODUCTOS";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -230,14 +234,14 @@
             this.bindingNavigatorDeleteItem,
             this.listadeProductosBindingNavigatorSaveItem,
             this.toolStripButtoncancelar});
-            this.listadeProductosBindingNavigator.Location = new System.Drawing.Point(0, 53);
+            this.listadeProductosBindingNavigator.Location = new System.Drawing.Point(0, 65);
             this.listadeProductosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.listadeProductosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.listadeProductosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.listadeProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeProductosBindingNavigator.Name = "listadeProductosBindingNavigator";
             this.listadeProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeProductosBindingNavigator.Size = new System.Drawing.Size(665, 27);
+            this.listadeProductosBindingNavigator.Size = new System.Drawing.Size(887, 27);
             this.listadeProductosBindingNavigator.TabIndex = 9;
             this.listadeProductosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -248,7 +252,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -280,7 +284,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -347,7 +351,7 @@
             this.toolStripButtoncancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtoncancelar.Image")));
             this.toolStripButtoncancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtoncancelar.Name = "toolStripButtoncancelar";
-            this.toolStripButtoncancelar.Size = new System.Drawing.Size(57, 24);
+            this.toolStripButtoncancelar.Size = new System.Drawing.Size(70, 24);
             this.toolStripButtoncancelar.Text = "Cancelar";
             this.toolStripButtoncancelar.Visible = false;
             this.toolStripButtoncancelar.Click += new System.EventHandler(this.toolStripButtoncancelar_Click);
@@ -357,10 +361,11 @@
             this.activoCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listadeProductosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(261, 259);
+            this.activoCheckBox.Location = new System.Drawing.Point(348, 319);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(181, 13);
-            this.activoCheckBox.TabIndex = 7;
+            this.activoCheckBox.Size = new System.Drawing.Size(241, 16);
+            this.activoCheckBox.TabIndex = 8;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // descripcionTextBox
@@ -368,9 +373,10 @@
             this.descripcionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource, "Descripcion", true));
-            this.descripcionTextBox.Location = new System.Drawing.Point(261, 113);
+            this.descripcionTextBox.Location = new System.Drawing.Point(348, 139);
+            this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(326, 20);
+            this.descripcionTextBox.Size = new System.Drawing.Size(433, 22);
             this.descripcionTextBox.TabIndex = 2;
             // 
             // destinoTextBox
@@ -378,9 +384,10 @@
             this.destinoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource, "Destino", true));
-            this.destinoTextBox.Location = new System.Drawing.Point(261, 184);
+            this.destinoTextBox.Location = new System.Drawing.Point(348, 226);
+            this.destinoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.destinoTextBox.Name = "destinoTextBox";
-            this.destinoTextBox.Size = new System.Drawing.Size(326, 20);
+            this.destinoTextBox.Size = new System.Drawing.Size(433, 22);
             this.destinoTextBox.TabIndex = 5;
             // 
             // fechadeEntregaDateTimePicker
@@ -388,9 +395,10 @@
             this.fechadeEntregaDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fechadeEntregaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listadeProductosBindingSource, "FechadeEntrega", true));
-            this.fechadeEntregaDateTimePicker.Location = new System.Drawing.Point(261, 207);
+            this.fechadeEntregaDateTimePicker.Location = new System.Drawing.Point(348, 255);
+            this.fechadeEntregaDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.fechadeEntregaDateTimePicker.Name = "fechadeEntregaDateTimePicker";
-            this.fechadeEntregaDateTimePicker.Size = new System.Drawing.Size(326, 20);
+            this.fechadeEntregaDateTimePicker.Size = new System.Drawing.Size(433, 22);
             this.fechadeEntregaDateTimePicker.TabIndex = 6;
             // 
             // idTextBox
@@ -398,21 +406,22 @@
             this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(261, 89);
+            this.idTextBox.Location = new System.Drawing.Point(348, 110);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(326, 20);
+            this.idTextBox.Size = new System.Drawing.Size(433, 22);
             this.idTextBox.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(432, 281);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(576, 346);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 32);
-            this.button1.TabIndex = 8;
+            this.button1.Size = new System.Drawing.Size(145, 39);
+            this.button1.TabIndex = 9;
             this.button1.Text = "ACTUALIZAR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -421,11 +430,11 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(545, 280);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(727, 345);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 33);
-            this.button2.TabIndex = 9;
+            this.button2.Size = new System.Drawing.Size(145, 41);
+            this.button2.TabIndex = 10;
             this.button2.Text = "OBTENER";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -448,10 +457,10 @@
             this.categoriaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categoriaIdComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.categoriaIdComboBox.FormattingEnabled = true;
-            this.categoriaIdComboBox.Location = new System.Drawing.Point(261, 160);
-            this.categoriaIdComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.categoriaIdComboBox.Location = new System.Drawing.Point(348, 197);
+            this.categoriaIdComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.categoriaIdComboBox.Name = "categoriaIdComboBox";
-            this.categoriaIdComboBox.Size = new System.Drawing.Size(326, 21);
+            this.categoriaIdComboBox.Size = new System.Drawing.Size(433, 24);
             this.categoriaIdComboBox.TabIndex = 4;
             this.categoriaIdComboBox.ValueMember = "Id";
             // 
@@ -466,10 +475,10 @@
             this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoIdComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.tipoIdComboBox.FormattingEnabled = true;
-            this.tipoIdComboBox.Location = new System.Drawing.Point(261, 136);
-            this.tipoIdComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.tipoIdComboBox.Location = new System.Drawing.Point(348, 167);
+            this.tipoIdComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tipoIdComboBox.Name = "tipoIdComboBox";
-            this.tipoIdComboBox.Size = new System.Drawing.Size(326, 21);
+            this.tipoIdComboBox.Size = new System.Drawing.Size(433, 24);
             this.tipoIdComboBox.TabIndex = 3;
             this.tipoIdComboBox.ValueMember = "Id";
             // 
@@ -499,11 +508,11 @@
             this.Column1,
             this.dataGridViewCheckBoxColumn1});
             this.listadeProductosDataGridView.DataSource = this.listadeProductosBindingSource1;
-            this.listadeProductosDataGridView.Location = new System.Drawing.Point(14, 317);
-            this.listadeProductosDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.listadeProductosDataGridView.Location = new System.Drawing.Point(19, 390);
+            this.listadeProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listadeProductosDataGridView.Name = "listadeProductosDataGridView";
             this.listadeProductosDataGridView.RowTemplate.Height = 24;
-            this.listadeProductosDataGridView.Size = new System.Drawing.Size(640, 179);
+            this.listadeProductosDataGridView.Size = new System.Drawing.Size(853, 220);
             this.listadeProductosDataGridView.TabIndex = 21;
             // 
             // dataGridViewTextBoxColumn1
@@ -556,18 +565,21 @@
             // 
             // precioTextBox
             // 
+            this.precioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource1, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(261, 233);
+            this.precioTextBox.Location = new System.Drawing.Point(348, 287);
+            this.precioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(326, 20);
-            this.precioTextBox.TabIndex = 22;
+            this.precioTextBox.Size = new System.Drawing.Size(433, 22);
+            this.precioTextBox.TabIndex = 7;
             // 
             // Productos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(665, 520);
+            this.ClientSize = new System.Drawing.Size(887, 640);
             this.Controls.Add(precioLabel);
             this.Controls.Add(this.precioTextBox);
             this.Controls.Add(this.listadeProductosDataGridView);
@@ -590,6 +602,7 @@
             this.Controls.Add(this.listadeProductosBindingNavigator);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Productos";
             this.Text = "Productos";
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingNavigator)).EndInit();
