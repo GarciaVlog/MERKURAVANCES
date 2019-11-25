@@ -26,21 +26,6 @@ namespace Merkur.win
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg,
         int wparam, int lparam);
 
-        private void Frmlogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -127,9 +112,7 @@ namespace Merkur.win
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
+      
     }
 }

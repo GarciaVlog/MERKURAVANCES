@@ -33,24 +33,37 @@ namespace Merkur.BL
             categoria4.Descripcion = "Peligroso";
             contexto.Categorias.Add(categoria4);
 
-            var tipo1 = new Tipos();
+            var tipo1 = new Tipo();
             tipo1.Descripcion = "Urgente";
-            contexto.Tipos.Add(tipo1);
+            contexto.Tipo.Add(tipo1);
 
-            var tipo2 = new Tipos();
+            var tipo2 = new Tipo();
             tipo2.Descripcion = "No Urgente";
-            contexto.Tipos.Add(tipo2);
+            contexto.Tipo.Add(tipo2);
 
             var clientes = new Cliente();
-            clientes.Cedula = 501215245454;
-            clientes.Nombres = "Orlando";            
-            clientes.Apellidos = "Garcia";
+            clientes.Cedula = "501215245454"; 
+            clientes.Nombres = "Orlando";
+            clientes.Apellidos = "Garcia";             
+            contexto.Cliente.Add(clientes);
+
 
             var clientes2 = new Cliente();
-            clientes2.Cedula = 165648921554;           
+            clientes2.Cedula = "165648921554";
             clientes2.Nombres = "Ronaldo";
             clientes2.Apellidos = "Zelaya";
-            
+           
+            contexto.Cliente.Add(clientes2);
+
+            var producto1 = new Producto();
+            producto1.Activo = true;
+            producto1.Descripcion = "Prueba";
+            producto1.Destino = "Desconocido";
+            producto1.Tipo = tipo1;
+            producto1.Categorias = categoria3;
+            producto1.FechadeEntrega = DateTime.Now;
+            producto1.Precio = 1;
+            contexto.Productos.Add(producto1);
 
             base.Seed(contexto);
         }

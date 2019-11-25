@@ -36,8 +36,9 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label categoriaIdLabel;
             System.Windows.Forms.Label tipoIdLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             System.Windows.Forms.Label precioLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button3 = new System.Windows.Forms.Button();
             this.listadeProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listadeProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -183,6 +184,17 @@
             tipoIdLabel.Size = new System.Drawing.Size(53, 24);
             tipoIdLabel.TabIndex = 19;
             tipoIdLabel.Text = "Tipo:";
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precioLabel.Location = new System.Drawing.Point(99, 283);
+            precioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(136, 23);
+            precioLabel.TabIndex = 21;
+            precioLabel.Text = "Precio de Envio:";
             // 
             // button3
             // 
@@ -430,7 +442,7 @@
             // 
             // listaTiposBindingSource
             // 
-            this.listaTiposBindingSource.DataSource = typeof(Merkur.BL.Tipos);
+            this.listaTiposBindingSource.DataSource = typeof(Merkur.BL.Tipo);
             // 
             // listaCategoriaBindingSource
             // 
@@ -500,6 +512,8 @@
             this.listadeProductosDataGridView.Location = new System.Drawing.Point(19, 390);
             this.listadeProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listadeProductosDataGridView.Name = "listadeProductosDataGridView";
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.listadeProductosDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.listadeProductosDataGridView.RowTemplate.Height = 24;
             this.listadeProductosDataGridView.Size = new System.Drawing.Size(858, 220);
             this.listadeProductosDataGridView.TabIndex = 21;
@@ -552,17 +566,6 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precioLabel.Location = new System.Drawing.Point(99, 283);
-            precioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(136, 23);
-            precioLabel.TabIndex = 21;
-            precioLabel.Text = "Precio de Envio:";
-            // 
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource, "Precio", true));
@@ -601,6 +604,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Productos";
+            this.Opacity = 0.95D;
             this.Text = "Productos";
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingNavigator)).EndInit();
             this.listadeProductosBindingNavigator.ResumeLayout(false);

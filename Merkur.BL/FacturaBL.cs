@@ -129,7 +129,7 @@ namespace Merkur.BL
                     if (producto != null)
                     {
                         detalle.Precio = producto.Precio;
-                        detalle.Total = detalle.Cantidad * producto.Precio;
+                        detalle.Total = detalle.Paquetes * producto.Precio;
 
                         Subtotal += detalle.Total;
                     }
@@ -178,6 +178,7 @@ namespace Merkur.BL
         public facturas1()
         {
             Fecha = DateTime.Now;
+            EntradaPaquete = DateTime.Now;
             FacturaDetalle = new BindingList<FacturasDetalle>();
             Activo = true;
         }
@@ -187,8 +188,7 @@ namespace Merkur.BL
         {
           public int Id { get; set; }
           public int ProductoId { get; set; }
-        public Producto Producto { get; set; }
-        public int Cantidad { get; set; }
+        public Producto Producto { get; set; }       
         public int Paquetes { get; set; }
         public double Precio { get; set; }
         public double Total { get; set; }

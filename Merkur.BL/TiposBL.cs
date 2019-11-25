@@ -11,24 +11,24 @@ namespace Merkur.BL
     public class TiposBL
     {
         Contexto _contexto;
-        public BindingList<Tipos> ListaTipos { get; set; }
+        public BindingList<Tipo> ListaTipos { get; set; }
         public TiposBL()
         {
             _contexto = new Contexto();
-            ListaTipos = new BindingList<Tipos>();
+            ListaTipos = new BindingList<Tipo>();
         }
 
-        public BindingList<Tipos> ObtenerTipos()
+        public BindingList<Tipo> ObtenerTipos()
         {
-            _contexto.Tipos.Load();
-            ListaTipos = _contexto.Tipos.Local.ToBindingList();
+            _contexto.Tipo.Load();
+            ListaTipos = _contexto.Tipo.Local.ToBindingList();
 
             return ListaTipos;
 
         }
     }
 
-    public class Tipos
+    public class Tipo
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }

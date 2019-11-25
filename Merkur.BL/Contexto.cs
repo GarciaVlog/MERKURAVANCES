@@ -23,7 +23,7 @@ namespace Merkur.BL
 
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Tipos> Tipos { get; set; }
+        public DbSet<Tipo> Tipo { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<facturas1> Facturas { get; set; }

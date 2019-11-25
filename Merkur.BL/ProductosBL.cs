@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Merkur.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
@@ -117,7 +118,7 @@ namespace Merkur.BL
         public int CategoriaId { get; set; }
         public Categoria Categorias { get; set; }
         public int TipoId { get; set; }
-        public Tipos Tipos { get; set; }
+        public Tipo Tipo { get; set; }
         public DateTime FechadeEntrega { get; set; }
         public double Precio { get; set; }
         public bool Activo { get; set; }

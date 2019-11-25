@@ -30,7 +30,8 @@ namespace Merkur.win
             var nuevoCliente = new Cliente();
             nuevoCliente.Nombres = nombresTextBox.Text;
             nuevoCliente.Apellidos = apellidosTextBox.Text;
-            nuevoCliente.Cedula = long.Parse(cedulaTextBox.Text);
+            nuevoCliente.Cedula = cedulaTextBox.Text;
+            
 
             //clear
             nombresTextBox.Clear();
@@ -43,6 +44,7 @@ namespace Merkur.win
 
             listadeClientesBindingSource.EndEdit();
             var clientes = (Cliente)listadeClientesBindingSource.Current;
+            var resultado = _clientesBL.GuardarClientes(clientes);
 
             if (fotoPictureBox.Image != null)
             {
@@ -52,9 +54,9 @@ namespace Merkur.win
             {
                 clientes.Foto = null;
             }
-            var resultado2 = _clientesBL.GuardarClientes(clientes);
+            var resultado3 = _clientesBL.GuardarClientes(clientes);
 
-            if (resultado2.Exitoso == true)
+            if (resultado3.Exitoso == true)
             {
                 listadeClientesBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
@@ -62,7 +64,7 @@ namespace Merkur.win
             }
             else
             {
-                MessageBox.Show(resultado2.Mensaje);
+                MessageBox.Show(resultado3.Mensaje);
             }
         }
 
@@ -99,8 +101,8 @@ namespace Merkur.win
         private void Eliminar(int id)
         {
 
-            var resultado2 = _clientesBL.EliminarClientes(id);
-            if (resultado2 == true)
+            var resultado3 = _clientesBL.EliminarClientes(id);
+            if (resultado3 == true)
             {
                 listadeClientesBindingSource.ResetBindings(false);
             }
@@ -116,10 +118,11 @@ namespace Merkur.win
         private void button3_Click(object sender, EventArgs e)
         {
             var id = int.Parse(idTextBox.Text);
-
-            var Cedula = int.Parse(cedulaTextBox.Text);
+            var Cedula = cedulaTextBox.Text;
             var Nombres = nombresTextBox.Text;
-            var Apellidos = apellidosTextBox.Text;            
+            var Apellidos = apellidosTextBox.Text;
+            
+                       
             
             _clientesBL.Actualizar(id, Cedula, Nombres, Apellidos);
             MessageBox.Show("Datos Actualizados");
@@ -141,6 +144,10 @@ namespace Merkur.win
 
                     fotoPictureBox.Image = Image.FromStream(fileStream);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Cree un cliente primero!");
             }
            
         }
@@ -170,7 +177,7 @@ namespace Merkur.win
             listadeClientesBindingSource.DataSource = Visible;
         }
 
-
+       
     }
 
 

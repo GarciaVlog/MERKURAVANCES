@@ -313,7 +313,7 @@
             // 
             this.contenedropanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedropanel.Location = new System.Drawing.Point(280, 80);
-            this.contenedropanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contenedropanel.Margin = new System.Windows.Forms.Padding(4);
             this.contenedropanel.Name = "contenedropanel";
             this.contenedropanel.Size = new System.Drawing.Size(800, 640);
             this.contenedropanel.TabIndex = 5;
@@ -329,9 +329,9 @@
             this.Controls.Add(this.ContenedorMenu);
             this.Controls.Add(this.Menutop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu";
-            this.Opacity = 0.9D;
+            this.Opacity = 0.95D;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

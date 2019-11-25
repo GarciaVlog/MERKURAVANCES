@@ -44,10 +44,8 @@ namespace Merkur.win
             bindingNavigatorMovePreviousItem.Enabled = valor;
             bindingNavigatorMoveNextItem.Enabled = valor;
             bindingNavigatorPositionItem.Enabled = valor;
-
             bindingNavigatorAddNewItem.Enabled = valor;
             bindingNavigatorDeleteItem.Enabled = valor;
-
             toolStripButtoncancelar.Visible = !valor;
         }
 
@@ -87,7 +85,7 @@ namespace Merkur.win
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var factura = (facturas1)listadeProductosBindingSource.Current;
+            var factura = (facturas1)listadeFacturasBindingSource.Current;
             var facturaDetalle = (FacturasDetalle)facturaDetalleBindingSource.Current;
 
             _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
@@ -102,16 +100,13 @@ namespace Merkur.win
 
         private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            var factura = (facturas1)listadeProductosBindingSource.Current;
+            var factura = (facturas1)listadeFacturasBindingSource.Current;
             _facturaBL.CalcularFactura(factura);
 
             listadeFacturasBindingSource.ResetBindings(false);
         }
 
-        private void Facturas_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
@@ -144,15 +139,16 @@ namespace Merkur.win
 
             var factura = (facturas1)listadeFacturasBindingSource.Current;
 
-            if (factura == null && factura.Id != 0 && factura.Activo == false)
+            if (factura != null && factura.Id != 0 && factura.Activo == false)
             {
-                label1.Visible = true;
+                anulado.Visible = true;
             }
             else
             {
-                label1.Visible = false;
+                anulado.Visible = false;
             }
-        }
-    }
-
+     
+            
+         }       
+    }    
 }

@@ -40,6 +40,7 @@
             System.Windows.Forms.Label subTotalLabel;
             System.Windows.Forms.Label totalLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facturas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.listadeFacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listadeFacturasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -76,7 +77,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.anulado = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             destinoLabel = new System.Windows.Forms.Label();
@@ -114,7 +115,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             clienteIdLabel.AutoSize = true;
             clienteIdLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            clienteIdLabel.Location = new System.Drawing.Point(15, 153);
+            clienteIdLabel.ForeColor = System.Drawing.Color.Black;
+            clienteIdLabel.Location = new System.Drawing.Point(15, 157);
             clienteIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             clienteIdLabel.Name = "clienteIdLabel";
             clienteIdLabel.Size = new System.Drawing.Size(65, 21);
@@ -127,7 +129,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             destinoLabel.AutoSize = true;
             destinoLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            destinoLabel.Location = new System.Drawing.Point(15, 183);
+            destinoLabel.ForeColor = System.Drawing.Color.Black;
+            destinoLabel.Location = new System.Drawing.Point(15, 187);
             destinoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             destinoLabel.Name = "destinoLabel";
             destinoLabel.Size = new System.Drawing.Size(70, 21);
@@ -140,7 +143,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             entradaPaqueteLabel.AutoSize = true;
             entradaPaqueteLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            entradaPaqueteLabel.Location = new System.Drawing.Point(15, 217);
+            entradaPaqueteLabel.ForeColor = System.Drawing.Color.Black;
+            entradaPaqueteLabel.Location = new System.Drawing.Point(15, 221);
             entradaPaqueteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             entradaPaqueteLabel.Name = "entradaPaqueteLabel";
             entradaPaqueteLabel.Size = new System.Drawing.Size(132, 21);
@@ -153,7 +157,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             fechaLabel.AutoSize = true;
             fechaLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fechaLabel.Location = new System.Drawing.Point(15, 249);
+            fechaLabel.ForeColor = System.Drawing.Color.Black;
+            fechaLabel.Location = new System.Drawing.Point(15, 253);
             fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new System.Drawing.Size(136, 21);
@@ -166,6 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.ForeColor = System.Drawing.Color.Black;
             idLabel.Location = new System.Drawing.Point(15, 121);
             idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
@@ -179,7 +185,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             iVSLabel.AutoSize = true;
             iVSLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iVSLabel.Location = new System.Drawing.Point(391, 555);
+            iVSLabel.ForeColor = System.Drawing.Color.Black;
+            iVSLabel.Location = new System.Drawing.Point(427, 555);
             iVSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             iVSLabel.Name = "iVSLabel";
             iVSLabel.Size = new System.Drawing.Size(38, 21);
@@ -192,7 +199,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             pesoPaqueteLabel.AutoSize = true;
             pesoPaqueteLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pesoPaqueteLabel.Location = new System.Drawing.Point(15, 281);
+            pesoPaqueteLabel.ForeColor = System.Drawing.Color.Black;
+            pesoPaqueteLabel.Location = new System.Drawing.Point(15, 285);
             pesoPaqueteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pesoPaqueteLabel.Name = "pesoPaqueteLabel";
             pesoPaqueteLabel.Size = new System.Drawing.Size(112, 21);
@@ -205,7 +213,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             subTotalLabel.AutoSize = true;
             subTotalLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            subTotalLabel.Location = new System.Drawing.Point(391, 523);
+            subTotalLabel.ForeColor = System.Drawing.Color.Black;
+            subTotalLabel.Location = new System.Drawing.Point(427, 523);
             subTotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             subTotalLabel.Name = "subTotalLabel";
             subTotalLabel.Size = new System.Drawing.Size(79, 21);
@@ -218,7 +227,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             totalLabel.AutoSize = true;
             totalLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            totalLabel.Location = new System.Drawing.Point(391, 582);
+            totalLabel.ForeColor = System.Drawing.Color.Black;
+            totalLabel.Location = new System.Drawing.Point(427, 582);
             totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             totalLabel.Name = "totalLabel";
             totalLabel.Size = new System.Drawing.Size(49, 21);
@@ -380,6 +390,7 @@
             // toolStripButtoncancelar
             // 
             this.toolStripButtoncancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtoncancelar.ForeColor = System.Drawing.Color.Black;
             this.toolStripButtoncancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtoncancelar.Image")));
             this.toolStripButtoncancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtoncancelar.Name = "toolStripButtoncancelar";
@@ -407,7 +418,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "Destino", true));
             this.destinoTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.destinoTextBox.Location = new System.Drawing.Point(161, 180);
+            this.destinoTextBox.Location = new System.Drawing.Point(161, 184);
             this.destinoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.destinoTextBox.Name = "destinoTextBox";
             this.destinoTextBox.Size = new System.Drawing.Size(340, 27);
@@ -419,7 +430,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.entradaPaqueteDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listadeFacturasBindingSource, "EntradaPaquete", true));
             this.entradaPaqueteDateTimePicker.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entradaPaqueteDateTimePicker.Location = new System.Drawing.Point(161, 212);
+            this.entradaPaqueteDateTimePicker.Location = new System.Drawing.Point(161, 216);
             this.entradaPaqueteDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.entradaPaqueteDateTimePicker.Name = "entradaPaqueteDateTimePicker";
             this.entradaPaqueteDateTimePicker.Size = new System.Drawing.Size(340, 27);
@@ -431,7 +442,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listadeFacturasBindingSource, "Fecha", true));
             this.fechaDateTimePicker.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(161, 244);
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(161, 248);
             this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(340, 27);
@@ -467,7 +478,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pesoPaqueteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeFacturasBindingSource, "PesoPaquete", true));
             this.pesoPaqueteTextBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pesoPaqueteTextBox.Location = new System.Drawing.Point(161, 277);
+            this.pesoPaqueteTextBox.Location = new System.Drawing.Point(161, 281);
             this.pesoPaqueteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pesoPaqueteTextBox.Name = "pesoPaqueteTextBox";
             this.pesoPaqueteTextBox.Size = new System.Drawing.Size(340, 27);
@@ -516,7 +527,7 @@
             this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clienteIdComboBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(161, 146);
+            this.clienteIdComboBox.Location = new System.Drawing.Point(161, 150);
             this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
             this.clienteIdComboBox.Size = new System.Drawing.Size(340, 27);
@@ -545,6 +556,8 @@
             this.facturaDetalleDataGridView.Location = new System.Drawing.Point(28, 320);
             this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.facturaDetalleDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(756, 177);
             this.facturaDetalleDataGridView.TabIndex = 43;
             this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
@@ -613,18 +626,20 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label1
+            // anulado
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(668, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 29);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "ANULADO";
-            this.label1.Visible = false;
+            this.anulado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.anulado.AutoSize = true;
+            this.anulado.BackColor = System.Drawing.Color.Transparent;
+            this.anulado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.anulado.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.anulado.ForeColor = System.Drawing.Color.Red;
+            this.anulado.Location = new System.Drawing.Point(622, 137);
+            this.anulado.Name = "anulado";
+            this.anulado.Size = new System.Drawing.Size(158, 40);
+            this.anulado.TabIndex = 44;
+            this.anulado.Text = "ANULADO";
+            this.anulado.Visible = false;
             // 
             // Facturas
             // 
@@ -632,7 +647,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 640);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.anulado);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.facturaDetalleDataGridView);
@@ -662,9 +677,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Facturas";
-            this.Opacity = 0.9D;
+            this.Opacity = 0.95D;
             this.Text = "Facturas";
-            this.Load += new System.EventHandler(this.Facturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listadeFacturasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeFacturasBindingNavigator)).EndInit();
             this.listadeFacturasBindingNavigator.ResumeLayout(false);
@@ -715,6 +729,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label anulado;
     }
 }
